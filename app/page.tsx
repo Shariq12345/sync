@@ -120,9 +120,12 @@ export default function Home() {
         </div>
 
         <section className="container py-6 lg:py-10 flex flex-col space-y-6 mt-[150px]">
-          <h2 className="text-2xl sm:text-5xl md:text-6xl lg:text-5xl font-black text-center">
-            Latest Posts
-          </h2>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8">
+            Latest{" "}
+            <span className="bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">
+              Posts
+            </span>
+          </h1>
 
           {/* Grid layout for latest posts */}
           <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
