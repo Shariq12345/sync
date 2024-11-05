@@ -111,12 +111,12 @@ export default async function AboutPage() {
                   Biography
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm sm:text-base">
-                  I'm a passionate software developer with over 5 years of
+                  I&apos;m a passionate software developer with over 5 years of
                   experience in building modern web applications. I specialize
                   in JavaScript technologies and have a strong focus on creating
-                  performant, scalable, and user-friendly applications. When I'm
-                  not coding, you can find me contributing to open-source
-                  projects or writing technical articles on my blog.
+                  performant, scalable, and user-friendly applications. When
+                  I&apos;m not coding, you can find me contributing to
+                  open-source projects or writing technical articles on my blog.
                 </p>
               </CardContent>
             </Card>
