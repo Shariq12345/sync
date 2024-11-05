@@ -12,7 +12,7 @@ export default function Home() {
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:24px_24px]" />
 
       {/* Gradient Blob */}
-      <div className="absolute -z-10 top-0 right-0 w-[600px] h-[600px] rounded-full opacity-20 bg-gradient-to-r from-purple-500 to-blue-500 blur-3xl" />
+      <div className="absolute z-10 top-0 right-0 w-[600px] h-[600px] rounded-full opacity-20 bg-gradient-to-r from-purple-500 to-blue-500 blur-3xl" />
 
       <main className="container mx-auto px-4 pt-24 pb-16">
         <div className="max-w-6xl mx-auto">
@@ -84,7 +84,7 @@ export default function Home() {
                 </div>
 
                 {/* Featured Article Preview */}
-                <div className="bg-background/50 backdrop-blur-sm border rounded-xl p-6 space-y-4 shadow-lg hover:shadow-xl transition-shadow">
+                <div className="bg-background/50 backdrop-blur-sm border rounded-xl p-6 space-y-4 shadow-lg hover:shadow-xl transition-shadow hidden md:block">
                   <div className="space-y-3">
                     <div className="flex items-center gap-2">
                       <div className="h-2 w-2 rounded-full bg-green-500" />
@@ -119,7 +119,7 @@ export default function Home() {
           </div>
         </div>
 
-        <section className="container py-6 lg:py-10 flex flex-col space-y-6 mt-[150px]">
+        <section className="py-6 lg:py-10 flex flex-col space-y-6 mt-[150px]">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8">
             Latest{" "}
             <span className="bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">
@@ -133,9 +133,15 @@ export default function Home() {
               <li key={post.slug} className="">
                 <PostItem
                   slug={post.slug}
+                  date={post.date}
                   title={post.title}
                   description={post.description}
-                  date={post.date}
+                  category={post.category}
+                  readTime={post.readTime}
+                  tags={post.tags}
+                  views={post.views}
+                  comments={post.comments}
+                  thumbnail={post.thumbnail}
                 />
               </li>
             ))}

@@ -20,7 +20,7 @@ const categories = [
   "Security",
 ];
 
-const POSTS_PER_PAGE = 5;
+const POSTS_PER_PAGE = 6;
 
 interface BlogPageProps {
   searchParams: {
@@ -60,7 +60,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
   );
 
   return (
-    <div className="min-h-screen bg-background relative py-16">
+    <div className="min-h-screen bg-background relative py-16 mt-10">
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:24px_24px]" />
 
       <div className="container mx-auto px-4">
@@ -85,6 +85,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
             const {
               slug,
               date,
+              thumbnail,
               title,
               description,
               category,
@@ -105,6 +106,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
                 tags={tags}
                 views={views}
                 comments={comments}
+                thumbnail={thumbnail}
               />
             );
           })}

@@ -60,7 +60,7 @@ export const SiteHeader = () => {
             <div
               className={`text-xl font-bold transition-colors ${
                 scrolled
-                  ? "text-gray-900 dark:text-gray-50"
+                  ? "text-gray-900 dark:text-gray-50 hover:text-indigo-600"
                   : "text-gray-900 hover:text-indigo-600 dark:text-white"
               }`}
             >

@@ -22,6 +22,7 @@ interface PostItemProps {
   tags?: string[];
   views?: string;
   comments?: string;
+  thumbnail?: string;
 }
 
 export function PostItem({
@@ -34,14 +35,22 @@ export function PostItem({
   tags,
   views,
   comments,
+  thumbnail,
 }: PostItemProps) {
   return (
     <article className="group bg-background/50 border rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300">
       {/* Image Container */}
       <div className="relative aspect-[16/9] overflow-hidden">
+        {/* <img
+          src={
+            "https://cdni.pornpics.de/460/5/223/43659428/43659428_015_c955.jpg"
+          }
+          alt={""}
+          className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
+        /> */}
         <img
-          // src={image}
-          // alt={blog.title}
+          src={thumbnail}
+          alt={""}
           className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
         />
         <div className="absolute top-4 left-4">
