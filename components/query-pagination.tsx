@@ -28,6 +28,7 @@ export function QueryPagination({
   const nextPage = currentPage + 1;
 
   const createPageURL = (pageNumber: number | string) => {
+    //@ts-ignore
     const params = new URLSearchParams(searchParams);
     params.set("page", pageNumber.toString());
     return `${pathname}?${params.toString()}`;
