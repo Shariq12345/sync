@@ -3,6 +3,22 @@ import { build } from "velite";
 /** @type {import('next').NextConfig} */
 export default {
   // othor next config here...
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**",
+      },
+      {
+        protocol: "https",
+        hostname: "raw.githubusercontent.com",
+        port: "", // No port required here
+        pathname: "/**",
+      },
+    ],
+    dangerouslyAllowSVG: true, // Enable SVG support
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+  },
   webpack: (config) => {
     config.plugins.push(new VeliteWebpackPlugin());
     return config;

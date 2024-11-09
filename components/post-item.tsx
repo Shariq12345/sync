@@ -11,6 +11,7 @@ import Link from "next/link";
 import { Button, buttonVariants } from "./ui/button";
 import { cn, formatDate } from "@/lib/utils";
 import { Badge } from "./ui/badge";
+import Image from "next/image";
 
 interface PostItemProps {
   slug: string;
@@ -48,11 +49,16 @@ export function PostItem({
           alt={""}
           className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
         /> */}
-        <img
+        <Image
+          src={thumbnail || "/default-thumbnail.png"}
+          alt="No image found"
+          fill
+        />
+        {/* <img
           src={thumbnail}
           alt={""}
           className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
-        />
+        /> */}
         <div className="absolute top-4 left-4">
           <Badge
             variant="secondary"
