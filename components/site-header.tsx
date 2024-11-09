@@ -57,11 +57,12 @@ export const SiteHeader = () => {
         <div className="h-16 flex items-center justify-between">
           {/* Logo */}
           <Link href="/">
+            {/* from-purple-600 to-blue-500 */}
             <div
               className={`text-xl font-bold transition-colors ${
                 scrolled
-                  ? "text-gray-900 dark:text-gray-50 hover:text-indigo-600"
-                  : "text-gray-900 hover:text-indigo-600 dark:text-white"
+                  ? "text-gray-900 dark:text-gray-50 hover:text-indigo-600 dark:hover:text-indigo-600"
+                  : "text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-500 hover:text-transparent dark:hover:from-purple-600 dark:hover:to-blue-500"
               }`}
             >
               Sync
