@@ -84,7 +84,9 @@ export function PostItem({
               {title}
             </h2>
           </Link>
-          <p className="text-muted-foreground line-clamp-1">{description}</p>
+          <p className="text-muted-foreground line-clamp-2 text-sm">
+            {description}
+          </p>
         </div>
 
         {/* Tags */}

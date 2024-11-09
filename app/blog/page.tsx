@@ -6,8 +6,9 @@ import { sortPosts } from "@/lib/utils";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "My blog",
-  description: "This is a description",
+  title: "Sync - Blog",
+  description:
+    "Discover the latest insights, tutorials, and best practices in software development and technology.",
 };
 
 const categories = [
@@ -62,6 +63,9 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
   return (
     <div className="min-h-screen bg-background relative py-16 mt-10">
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:24px_24px]" />
+
+      {/* Gradient Blob */}
+      {/* <div className="absolute z-10 top-0 right-0 w-[600px] h-[600px] rounded-full opacity-20 bg-gradient-to-r from-purple-500 to-blue-500 blur-3xl" /> */}
 
       <div className="container mx-auto px-4">
         {/* Header Section */}
