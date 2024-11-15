@@ -25,12 +25,12 @@ export function SiteFooter() {
                 <Input
                   type="email"
                   placeholder="Your email address"
-                  className="bg-gray-800 border-gray-700 focus:border-blue-500 text-gray-300 placeholder-gray-500"
+                  className="bg-gray-800 border-gray-700 focus:border-purple-500 text-gray-300 placeholder-gray-500"
                 />
                 <Button
                   variant="secondary"
                   size="sm"
-                  className="h-10 bg-gradient-to-r from-purple-600 to-blue-500 text-white"
+                  className="h-10 bg-gradient-to-r from-purple-600 to-purple-500 text-white"
                 >
                   <Send className="h-5 w-5 mr-1" />
                   Subscribe
@@ -61,7 +61,7 @@ export function SiteFooter() {
                 <li key={item}>
                   <a
                     href={`/${item.toLowerCase()}`}
-                    className="hover:text-blue-400 transition-colors"
+                    className="hover:text-purple-400 transition-colors"
                   >
                     {item}
                   </a>
@@ -84,7 +84,7 @@ export function SiteFooter() {
                 <li key={item}>
                   <a
                     href={`/category/${item.toLowerCase()}`}
-                    className="hover:text-blue-400 transition-colors"
+                    className="hover:text-purple-400 transition-colors"
                   >
                     {item}
                   </a>
@@ -138,13 +138,13 @@ export function SiteFooter() {
             <div className="flex space-x-4 text-sm">
               <a
                 href="/privacy"
-                className="hover:text-blue-400 transition-colors"
+                className="hover:text-purple-400 transition-colors"
               >
                 Privacy Policy
               </a>
               <a
                 href="/terms"
-                className="hover:text-blue-400 transition-colors"
+                className="hover:text-purple-400 transition-colors"
               >
                 Terms of Service
               </a>

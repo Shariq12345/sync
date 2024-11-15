@@ -6,6 +6,7 @@ import "@/styles/mdx.css";
 import { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 import BackToTopButton from "@/components/back-to-top-button";
+import CommentSection from "@/components/comment-section";
 
 interface PostPageProps {
   params: {
@@ -82,12 +83,14 @@ export default async function PostPage({ params }: PostPageProps) {
       ) : null}
       <hr className="my-4" />
       <MDXContent code={post.body} />
+      <CommentSection />
       <BackToTopButton />
     </article>
   );
 }
 
-{/* <div className="mt-[64px] container py-6 max-w-6xl mx-auto flex space-x-6">
+{
+  /* <div className="mt-[64px] container py-6 max-w-6xl mx-auto flex space-x-6">
 <article className="prose dark:prose-invert max-w-3xl">
   <h1 className="mb-2">{post.title}</h1>
   {post.description ? (
@@ -98,10 +101,15 @@ export default async function PostPage({ params }: PostPageProps) {
   <hr className="my-4" />
   <MDXContent code={post.body} />
   <BackToTopButton />
-</article> */}
+</article> */
+}
 
-{/* Sidebar for "On This Page" */}
-{/* <aside className="w-64 flex-none">
+{
+  /* Sidebar for "On This Page" */
+}
+{
+  /* <aside className="w-64 flex-none">
   <OnThisPage />
 </aside>
-</div> */}
+</div> */
+}
